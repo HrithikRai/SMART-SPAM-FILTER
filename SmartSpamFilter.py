@@ -9,7 +9,7 @@ import pandas as pd
 import indicoio
 from profanity import profanity
 indicoio.config.api_key = '473582e80e2d070f5d496b14f8f83ee8'
-data=pd.read_table(r"C:\Users\acer\Desktop\SMSCollection.txt",header=None,names=['label','message'])
+data=pd.read_table(r"SMSCollection.txt",header=None,names=['label','message'])
 print(data.label.value_counts())
 data['label_num']=data.label.map({'ham':0,'spam':1})
 X=data.message
